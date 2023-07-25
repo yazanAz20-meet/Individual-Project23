@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <link rel="stylesheet" href="static/css/style.css">
 </head>
@@ -13,9 +14,28 @@
         <li>
             <a href="/profile">PROFILE</a>
         </li>
+        <li>
+            <a href="/Sign_Out">SIGN OUT</a>
+        </li>
       </ul>
     </nav>
   </header>
-    
+<div class="text-container">
+  <ul>
+    {% for c in countries %}
+    <h1>{{c}}</h1>
+      <li>{{countries[c]["attraction_1"]["attraction_name"]}}</li>
+      <li>{{countries[c]["attraction_1"]["description"]}}</li>
+      <h2></h2>
+      <li>{{countries[c]["attraction_2"]["attraction_name"]}}</li>
+      <li>{{countries[c]["attraction_2"]["description"]}}</li>
+    {% endfor %}
+
+
+  </ul>
+
+
+</div>
+
 </body>
 </html>

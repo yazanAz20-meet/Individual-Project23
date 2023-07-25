@@ -59,7 +59,7 @@ def signup():
         "email":request.form['email'],
         }
         db.child("Users").child(UID).set(user)
-        add_data()
+        
         return redirect(url_for('home'))
     #except:
         error = "SIGN UP Authenticitoinsaoinsa / database afaiedkeedlead"
@@ -379,10 +379,9 @@ europe_countries_dict = {
     }
 }
 
-def add_data():{
-    
-db.child("Countries").set(europe_countries_dict)
-}
+def add_data():
+    db.child("Countries").set(europe_countries_dict)
+
 
 
 @app.route('/profile')
@@ -390,10 +389,17 @@ def profile():
     return render_template("profile.html")
 
 
+@app.route('/Sign_Out')
+def sign_out():
+    login_session['user'] = None
+    auth.current_user = None
+    return redirect(url_for('signin'))
 
-@app.route('/homepage')
+
+@app.route('/homepage', methods = ['POST','GET'])
 def home():
-    return render_template("home.html")
+    countries = db.child('Countries').get().val()
+    return render_template("home.html", countries = countries)
 
 #Code goes above here
 
