@@ -7,7 +7,10 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #f2f2f2;
+  background-image: url('https://www.brookings.edu/wp-content/uploads/2021/01/shutterstock_1558058690_small.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .container {
@@ -163,6 +166,15 @@ h1 {
 
 
 
+.text-container {
+  width: 200px; /* Set the width of the container to your desired value */
+  white-space: nowrap; /* Prevent the text from wrapping to multiple lines */
+ /* Hide any overflowing text */
+  text-overflow: ellipsis; /* Show an ellipsis (...) when text is cut off */
+  padding-top: f;
+}
 
 
-
+.top-center-container {
+    margin-top: 100px; /* You can adjust this value to move the element up or down */
+}

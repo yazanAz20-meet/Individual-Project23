@@ -1,0 +1,66 @@
+body {
+	margin: 0;
+	font-size: 1.15em;
+	font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+}
+
+ul {
+	list-style-type:none;
+}
+
+.header-bar {
+	margin: 0;
+	background-color: #2f2f2f;
+	font-size: 2em;
+}
+
+.unlink {
+	text-decoration: none;
+	color: white;
+}
+
+.color-black {
+	color: black;
+}
+
+.margin-1 {
+	margin: 1em;
+}
+
+.form-title {
+	font-size: 2em;
+	margin: 1.5em;
+}
+
+.form-text {
+	font-size: 1.25em;
+}
+
+.story-text {
+	margin: 2em;
+	width: 35%;
+	height: 16em;
+	border: none;
+	border: 2px solid #FFFFFF;
+	border-bottom: 2px solid #2f2f2f;
+/*	box-shadow: 0px 0px 0px 0px #FFFFFF;*/
+	background-color: #F9F9F9;
+	border-radius: 0.75em;
+	transition: 0.1s;
+}
+
+.story-text:hover {
+	border:  2px solid #2f2f2f;
+/*	box-shadow: 0em 0em 0.5em 0.05em #CFCFCF;*/
+	border-radius: 0.25em;
+	transition: 0.1s;
+}
+
+
+.down-button {
+	width: 1em;
+/*	height: 6em;*/
+	font-size: 6em;
+	padding: 0;
+	margin: 0;
+}
